@@ -1,0 +1,119 @@
+{
+  "status": "FAILED",
+  "failure_reason": "step 4: page did not advance after submit (validation: ['Invalid OTP', 'Notification Invalid OTP'])",
+  "started": "2026-11-14T15:00:59",
+  "email_used": "qa.agent+20261114150059@example.com",
+  "steps": [
+    {
+      "n": 1,
+      "url": "https://authorized-partner.vercel.app/register",
+      "heading": "Welcome to Authorized Partner",
+      "fields": [
+        {
+          "field": "checkbox",
+          "mapped_to": "tick",
+          "value": "checked"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Continue",
+      "errors": [],
+      "screenshot": "step_01.png"
+    },
+    {
+      "n": 2,
+      "url": "https://authorized-partner.vercel.app/register?step=setup",
+      "heading": "Complete Your Agent Profile in Steps",
+      "fields": [
+        {
+          "field": "First Name",
+          "mapped_to": "first_name",
+          "value": "Test"
+        },
+        {
+          "field": "Last Name",
+          "mapped_to": "last_name",
+          "value": "Agent"
+        },
+        {
+          "field": "Email Address",
+          "mapped_to": "email",
+          "value": "qa.agent+20261114150059@example.com"
+        },
+        {
+          "field": "Phone Number",
+          "mapped_to": "phone",
+          "value": "9812345678"
+        },
+        {
+          "field": "Phone Number",
+          "mapped_to": "phone",
+          "value": "9812345678"
+        },
+        {
+          "field": "Password",
+          "mapped_to": "password",
+          "value": "********"
+        },
+        {
+          "field": "Confirm Password",
+          "mapped_to": "password",
+          "value": "********"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Next",
+      "errors": [],
+      "screenshot": "step_02.png"
+    },
+    {
+      "n": 3,
+      "url": "https://authorized-partner.vercel.app/register?step=setup",
+      "heading": "Complete Your Agent Profile in Steps",
+      "fields": [
+        {
+          "field": "input",
+          "mapped_to": "otp",
+          "value": "123456"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Verify Code",
+      "errors": [
+        "Invalid OTP",
+        "Notification Invalid OTP"
+      ],
+      "screenshot": "step_03.png"
+    },
+    {
+      "n": 4,
+      "url": "https://authorized-partner.vercel.app/register?step=setup",
+      "heading": "Complete Your Agent Profile in Steps",
+      "fields": [],
+      "warnings": [],
+      "clicked": "Verify Code",
+      "errors": [
+        "Invalid OTP",
+        "Notification Invalid OTP"
+      ],
+      "screenshot": "step_04.png"
+    }
+  ],
+  "failed_requests": [
+    "400 POST https://stage.cloudedu.com.au/api/tempuser/verify-otp/",
+    "400 POST https://stage.cloudedu.com.au/api/tempuser/verify-otp/"
+  ],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+  ],
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.15.0rc1",
+    "playwright": "1.65.2",
+    "browser": "chromium",
+    "headless": false,
+    "base_url": "https://authorized-partner.vercel.app"
+  },
+  "duration_s": 56.4
+}

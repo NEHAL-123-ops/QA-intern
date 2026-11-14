@@ -1,0 +1,33 @@
+<!doctype html><html><head><title>Mock Authorized Partner</title></head><body>
+<div id="app"></div>
+<script>
+let step=1; const app=document.getElementById('app');
+function render(){
+ if(step===1) app.innerHTML=`<h2>Register Your Agency</h2>
+  <button role="checkbox" aria-checked="false" id="t" onclick="this.setAttribute('aria-checked',this.getAttribute('aria-checked')!=='true')"></button> I agree to the Terms
+  <br><button id="go">Continue</button>`;
+ if(step===2) app.innerHTML=`<h2>Agency Details</h2>
+  <label>Agency Name <input name="agency" required></label><br>
+  <label>Website <input name="site" placeholder="https://"></label><br>
+  <label>Country <select name="country"><option value="">Select</option><option value="np">Nepal</option><option value="in">India</option></select></label><br>
+  <label>City <input name="city"></label><br>
+  <label>Business license <input type="file" accept=".pdf" style="display:none"></label>
+  <div id="err" role="alert"></div><button id="go">Next</button>`;
+ if(step===3) app.innerHTML=`<h2>Create Account</h2>
+  <label>First Name <input name="fn"></label><br><label>Last Name <input name="ln"></label><br>
+  <label>Email <input type="email"></label><br><label>Phone <input type="tel"></label><br>
+  <label>Password <input type="password"></label><br><label>Confirm Password <input type="password"></label><br>
+  <div id="err" role="alert"></div><button id="go">Submit</button>`;
+ if(step===4) app.innerHTML=`<h2>Verify</h2><label>Verification code <input name="otp"></label><div id="err" role="alert"></div><button id="go">Verify</button>`;
+ if(step===5) app.innerHTML=`<h2>All done</h2><p>Registration successful. Check your email.</p>`;
+ const g=document.getElementById('go'); if(g) g.onclick=next;
+}
+function next(){
+ const err=document.getElementById('err'); const ins=[...app.querySelectorAll('input:not([type=file]),select')];
+ if(step===1 && document.getElementById('t').getAttribute('aria-checked')!=='true') return;
+ if(step>1 && ins.some(i=>!i.value)){ err.innerText='All fields required'; return; }
+ if(step===4 && app.querySelector('input').value!=='123456'){ err.innerText='Invalid code'; return; }
+ step++; render();
+}
+render();
+</script></body></html>

@@ -1,0 +1,129 @@
+{
+  "status": "PASSED",
+  "failure_reason": "",
+  "started": "2026-11-14T08:10:43",
+  "email_used": "qa.agent+20261114081043@example.com",
+  "steps": [
+    {
+      "n": 1,
+      "url": "http://127.0.0.1:8765/register",
+      "heading": "Register Your Agency",
+      "fields": [
+        {
+          "field": "checkbox",
+          "mapped_to": "tick",
+          "value": "checked"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Continue",
+      "errors": [],
+      "screenshot": "step_01.png"
+    },
+    {
+      "n": 2,
+      "url": "http://127.0.0.1:8765/register",
+      "heading": "Agency Details",
+      "fields": [
+        {
+          "field": "Agency Name",
+          "mapped_to": "agency_name",
+          "value": "QA Education Consultancy"
+        },
+        {
+          "field": "Website",
+          "mapped_to": "website",
+          "value": "https://example.com"
+        },
+        {
+          "field": "Country",
+          "mapped_to": "country",
+          "value": "Nepal"
+        },
+        {
+          "field": "City",
+          "mapped_to": "city",
+          "value": "Kathmandu"
+        },
+        {
+          "field": "file upload",
+          "mapped_to": "sample file",
+          "value": "sample.pdf"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Next",
+      "errors": [],
+      "screenshot": "step_02.png"
+    },
+    {
+      "n": 3,
+      "url": "http://127.0.0.1:8765/register",
+      "heading": "Create Account",
+      "fields": [
+        {
+          "field": "First Name",
+          "mapped_to": "first_name",
+          "value": "Test"
+        },
+        {
+          "field": "Last Name",
+          "mapped_to": "last_name",
+          "value": "Agent"
+        },
+        {
+          "field": "Email",
+          "mapped_to": "email",
+          "value": "qa.agent+20261114081043@example.com"
+        },
+        {
+          "field": "Phone",
+          "mapped_to": "phone",
+          "value": "9812345678"
+        },
+        {
+          "field": "Password",
+          "mapped_to": "password",
+          "value": "********"
+        },
+        {
+          "field": "Confirm Password",
+          "mapped_to": "password",
+          "value": "********"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Submit",
+      "errors": [],
+      "screenshot": "step_03.png"
+    },
+    {
+      "n": 4,
+      "url": "http://127.0.0.1:8765/register",
+      "heading": "Verify",
+      "fields": [
+        {
+          "field": "Verification code",
+          "mapped_to": "otp",
+          "value": "123456"
+        }
+      ],
+      "warnings": [],
+      "clicked": "Verify",
+      "errors": [],
+      "screenshot": "step_04.png"
+    }
+  ],
+  "failed_requests": [],
+  "console_errors": [],
+  "environment": {
+    "os": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "playwright": "1.63.0",
+    "browser": "chromium",
+    "headless": true,
+    "base_url": "http://127.0.0.1:8765"
+  },
+  "success_evidence": "success message on page: 'Registration successful'",
+  "duration_s": 7.6
+}
