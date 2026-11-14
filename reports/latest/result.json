@@ -1,8 +1,8 @@
 {
   "status": "FAILED",
   "failure_reason": "step 4: page did not advance after submit (validation: ['Invalid OTP', 'Notification Invalid OTP'])",
-  "started": "2026-11-14T15:00:59",
-  "email_used": "qa.agent+20261114150059@example.com",
+  "started": "2026-11-14T16:18:52",
+  "email_used": "qa.agent+20261114161852@example.com",
   "steps": [
     {
       "n": 1,
@@ -38,7 +38,7 @@
         {
           "field": "Email Address",
           "mapped_to": "email",
-          "value": "qa.agent+20261114150059@example.com"
+          "value": "qa.agent+20261114161852@example.com"
         },
         {
           "field": "Phone Number",
@@ -115,5 +115,5 @@
     "headless": false,
     "base_url": "https://authorized-partner.vercel.app"
   },
-  "duration_s": 56.4
+  "duration_s": 57.7
 }

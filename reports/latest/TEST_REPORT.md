@@ -1,10 +1,10 @@
 # Test Report - Authorized Partner signup automation
 
 - **Result:** FAIL
-- **Started:** 2026-11-14T15:00:59   **Duration:** 56.4s
+- **Started:** 2026-11-14T16:18:52   **Duration:** 57.7s
 - **Target:** https://authorized-partner.vercel.app/register
 - **Evidence:** step 4: page did not advance after submit (validation: ['Invalid OTP', 'Notification Invalid OTP'])
-- **Email used:** `qa.agent+20261114150059@example.com`
+- **Email used:** `qa.agent+20261114161852@example.com`
 
 ## Environment
 
@@ -30,7 +30,7 @@ URL: `https://authorized-partner.vercel.app/register?step=setup`  |  Clicked: **
 |---|---|---|
 | First Name | first_name | Test |
 | Last Name | last_name | Agent |
-| Email Address | email | qa.agent+20261114150059@example.com |
+| Email Address | email | qa.agent+20261114161852@example.com |
 | Phone Number | phone | 9812345678 |
 | Phone Number | phone | 9812345678 |
 | Password | password | ******** |

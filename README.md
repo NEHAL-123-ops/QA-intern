@@ -44,13 +44,15 @@ python -m pytest -v                              # same flow via pytest
 
 Optional environment variables: `BASE_URL`, `TEST_EMAIL`, `TEST_PASSWORD`, `TEST_OTP`,
 `CHROMIUM_PATH` (use a system browser), `BROWSER_ARGS` (e.g. `--no-sandbox`).
-The script never invents an OTP: it uses `TEST_OTP` or the value in `test_data.json`, and it raises a clear error if neither provides a real code.
+The script requires a website-issued OTP through `TEST_OTP` or `test_data.json`; it
+does not supply a default or guess a code, and raises a clear error if no OTP is configured.
 
 ## Test data
 `test_data.json` - a fresh email is generated each run from `email_template`
 (`qa.agent+<timestamp>@example.com`). If the site sends a real verification email/OTP,
 set `TEST_EMAIL` to an inbox you control (plus-addressing works) and `TEST_OTP` to the code,
-or use an email-testing service.
+or use an email-testing service. The included test suite uses the local mock wizard and its
+test-only code; it does not submit registrations to the live site.
 Note: each run submits a real registration to the live site. Test data is clearly labelled as QA data.
 
 ## Output / test report
